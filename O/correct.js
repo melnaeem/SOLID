@@ -1,79 +1,67 @@
-class Question {
-  constructor(description) {
-    this.description = description;
-  }
 
-  printChoices(choices) {
-    console.log(choices);
-  }
+// class BooleanQuestion {
+//   constructor(description) {
+//     this.description = description;
+//   }
 
-  printDescription() {
-    console.log(this.description);
-  }
-}
+//   printChoices() {
+//     console.log('1. True');
+//     console.log('3. False');
+//   }
+// }
 
-class BooleanQuestion extends Question {
-  constructor(description) {
-    super(description);
-  }
+// class MultiChoiceQuestion {
+//   constructor(description, options) {
+//     this.description = description;
+//     this.options = options;
+//   }
 
-  printChoices() {
-    super.printChoices('1. True');
-    super.printChoices('3. False');
-  }
-}
+//   printChoices() {
+//     this.options.forEach((option, index) => {
+//       console.log(`${index + 1}. ${option}`);
+//     });
+//   }
+// }
 
-class MultiChoiceQuestion extends Question {
-  constructor(description, options) {
-    super(description);
-    this.options = options;
-  }
+// class TextQuestion {
+//   constructor(description) {
+//     this.description = description;
+//   }
 
-  printChoices() {
-    this.options.forEach((option, index) => {
-      super.printChoices(`${index + 1}. ${option}`);
-    });
-  }
-}
+//   printChoices() {
+//     console.log('Answer: __________________');
+//   }
+// }
 
-class TextQuestion extends Question {
-  constructor(description) {
-    super(description);
-  }
+// class RangeQuestion {
+//   constructor(description) {
+//     this.description = description;
+//   }
 
-  printChoices() {
-    super.printChoices('Answer: __________________');
-  }
-}
+//   printChoices() {
+//     console.log('Minimum: __________________');
+//     console.log('Maximum: __________________');
+//   }
+// }
 
-class RangeQuestion extends Question {
-  constructor(description) {
-    super(description);
-  }
+// function printAllQuestions(questions) {
+//   questions.forEach(question => {
+//     question.printDescription();
+//     console.log(question.description)
+//     question.printChoices();
+//     // print new line between each question
+//     console.log('');
+//   });
+// }
 
-  printChoices() {
-    super.printChoices('Minimum: __________________');
-    super.printChoices('Maximum: __________________');
-  }
-}
+// const Questions = [
+//   new BooleanQuestion('This is a true/false question'),
+//   new MultiChoiceQuestion(
+//     'What is your favourite language?',
+//     ['HTML', 'CSS', 'JS', 'Python']
+//   ),
+//   new TextQuestion('Describe your favourite JS feature'),
+//   new RangeQuestion('What is the speed limit in your city?')
+// ];
 
-function printAllQuestions(questions) {
-  questions.forEach(question => {
-    question.printDescription();
-    question.printChoices();
-
-    console.log(''); // to print new line between each question
-  });
-}
-
-const Questions = [
-  new BooleanQuestion('This is a true/false question'),
-  new MultiChoiceQuestion(
-    'What is your favourite language?',
-    ['HTML', 'CSS', 'JS', 'Python']
-  ),
-  new TextQuestion('Descrie your favourite JS feature'),
-  new BooleanQuestion('This is a true/false question'),
-]
-
-printAllQuestions(Questions);
+// printAllQuestions(Questions);

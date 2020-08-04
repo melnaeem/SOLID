@@ -1,0 +1,23 @@
+{
+  "name": "solid",
+  "version": "1.0.0",
+  "description": "SOLID principles using JavaScript (nodeJS)",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.9.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melnaeem/SOLID.git"
+  },
+  "author": "Mohamed Abdelnaeem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melnaeem/SOLID/issues"
+  },
+  "homepage": "https://github.com/melnaeem/SOLID#readme"
+}
